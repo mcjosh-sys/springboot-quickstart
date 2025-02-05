@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: "quickstart"
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/postgres" #"jdbc:h2:mem:testdb"
+    #    driverClassName: "org.h2.Driver"
+    driver-class-name: "org.postgresql.Driver"
+    username: "postgres"
+    password: "changemeinprod!"
+  sql:
+    init:
+      mode: "always"
+#server:
+#  port: "8800"
+
+pizza:
+  crust: "stuffed"
+  sauce: "bbq"
+  topping: "chicken"
