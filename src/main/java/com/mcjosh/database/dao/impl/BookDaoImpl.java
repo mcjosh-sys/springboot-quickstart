@@ -1,15 +1,16 @@
 package com.mcjosh.database.dao.impl;
 
-import com.mcjosh.database.dao.BookDao;
-import com.mcjosh.database.domain.Book;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Component;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
+
+import com.mcjosh.database.dao.BookDao;
+import com.mcjosh.database.domain.Book;
 
 @Component
 public class BookDaoImpl implements BookDao {
@@ -49,7 +50,7 @@ public class BookDaoImpl implements BookDao {
     public static class BookRowMapper implements RowMapper<Book> {
 
         @Override
-        public Book mapRow(ResultSet rs, int rowNum) throws SQLException {
+        public Book mapRow(@SuppressWarnings("null") ResultSet rs, int rowNum) throws SQLException {
             return Book.builder()
                     .isbn(rs.getString("isbn"))
                     .title(rs.getString("title"))

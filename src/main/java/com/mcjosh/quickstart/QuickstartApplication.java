@@ -9,10 +9,10 @@ import java.util.Map;
 public class QuickstartApplication {
 
 	public static void main(String[] args) {
-//		SpringApplication app = new SpringApplication(QuickstartApplication.class);
+		SpringApplication app = new SpringApplication(QuickstartApplication.class);
 		SpringApplication.run(QuickstartApplication.class, args);
-//		app.setDefaultProperties(Map.of("server.port","8800"));
-//		app.run(args);
+		app.setDefaultProperties(Map.of("server.port","8800"));
+		app.run(args);
 	}
 
 }
